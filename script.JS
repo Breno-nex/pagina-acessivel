@@ -7,15 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     AumentaFontBotao.addEventListener ("click", funtion() {
         tamanhoAtualFonte += 0.1;
-        document.body.style.fontSize = '$(tamanhoAtualFonte)rem'
+        document.body.style.fontSize =  '$(tamanhoAtualFonte)rem'
     
+    })
 
     DiminuirFontBotao.addEventListener ("click", funtion() {
         tamanhoAtualFonte -= 0.1;
         document.body.style.fontSize = '$(tamanhoAtualFonte)rem'
-    
+    })
+
 })
-}}))
+
+    
 
 
+    
 
