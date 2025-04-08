@@ -1,33 +1,37 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function () {
+    const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
+    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
 
-    const botaoAcessibilidade = document.getElementById("botao-acessibilidade");
-    const opcoesAcessibilidade = document.getElementById("opcoes-acessibilidade");
+    botaoDeAcessibilidade.addEventListener('click', function () {
+        botaoDeAcessibilidade.classList.toggle('rotacao-botao');
+        opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
 
-    botaoAcessibilidade.addEventListener("click",function (){
-        botaoAcessibilidade.classList.toggle ("rotacao-botao")
-        opcoesAcessibilidade.classList.toggle ("apresenta-lista")
     })
 
-    const AumentaFontBotao = document.getElementById ("aumentar-Fonte");
-    const DiminuirFontBotao = document.getElementById ("diminuir-Fonte");
- 
-    let tamanhoAtualFonte =1;
+    const aumentaFonteBotao = document.getElementById('aumentar-fonte');
+    const diminuiFonteBotao = document.getElementById('diminuir-fonte');
 
-    AumentaFontBotao.addEventListener ("click", funtion() {
+    const alternaContraste = document.getElementById('alterna-contraste')
+
+    let tamanhoAtualFonte = 1;
+
+    aumentaFonteBotao.addEventListener('click', function () {
         tamanhoAtualFonte += 0.1;
-        document.body.style.fontSize =  '$(tamanhoAtualFonte)rem'
-    
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`
+
     })
 
-    DiminuirFontBotao.addEventListener ("click", funtion() {
+    diminuiFonteBotao.addEventListener('click', function () {
         tamanhoAtualFonte -= 0.1;
-        document.body.style.fontSize = '$(tamanhoAtualFonte)rem'
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`
+
     })
+
+    alternaContraste.addEventListener('click', function () {
+        document.body.classList.toggle('alto-contraste')
+    })
+
 
 })
-
-    
-
-
     
 
